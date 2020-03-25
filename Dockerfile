@@ -12,4 +12,6 @@ RUN make install
 
 EXPOSE 2101
 
-CMD /usr/local/ntripcaster/bin/ntripcaster
+WORKDIR /usr/local/ntripcaster/bin
+
+CMD ./ntripcaster
