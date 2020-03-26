@@ -57,6 +57,7 @@ size_t ice_strlen (const char *string);
 char *nice_time_minutes (unsigned long int minutes, char *buf);
 const char *nullcheck_string (const char *string);
 void clean_http_string(char *string);
+char *my_strcpy(char* dest, const char* src);
 #endif
 
 /* vsnprintf.h. ajd *********************************************************/

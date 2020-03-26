@@ -119,8 +119,8 @@ splitc (char *first, char *rest, const char divider)
 	}
 
 	*p = 0;
-	if (first != NULL) strcpy(first, rest);
-	if (first != rest) strcpy(rest, p + 1);
+	if (first != NULL) my_strcpy(first, rest);
+	if (first != rest) my_strcpy(rest, p + 1);
 
 	return rest;
 }
@@ -722,3 +722,13 @@ free_variables (vartree_t *request_vars)
 	avl_destroy (request_vars, NULL);
 }
 
+char *my_strcpy(char* dest, const char* src)
+{
+	int i = 0;
+    while ((dest[i] = src[i]) != '\0')
+    {
+        i++;
+    }
+
+	return dest; 
+}
